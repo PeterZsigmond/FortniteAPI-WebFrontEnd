@@ -1,0 +1,76 @@
+@font-face
+{
+    font-family: Burbank;
+    src: url("font/BurbankBigCondensed-Bold.otf") format("opentype");
+}
+
+body
+{
+	min-width: 330px;
+	font-family: Burbank;
+}
+
+.bg
+{
+	background: url('images/bg.jpg') no-repeat center center scroll;
+	-webkit-background-size: cover;
+	background: cover;
+	padding: 320px 0;
+}
+
+.normal_font
+{
+	font-family: Arial;
+}
+
+.text-yellow
+{
+	color: yellow;
+}
+
+.text-green
+{
+	color: green;
+}
+
+.text-red
+{
+	color: red;
+}
+
+.bg-yellow
+{
+	background-color: #93F;
+}
+
+.bg-42
+{
+	background-color: #424242;
+}
+
+.bg-53
+{
+	background-color: #535353;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+.w-200px
+{
+	width: 200px;
+}
+
+.h-175px
+{
+	height: 175px;
+}
+
+.headerImg
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

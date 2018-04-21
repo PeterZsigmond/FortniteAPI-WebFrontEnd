@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<meta charset="UTF-8">
+		<title>Fortnite statisztikák</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="fortnite.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+
+	<body>
+		
+		<div class="bg pt-4">
+		
+			<div class="container mb-1">
+				<img src="images/fbr.png" class="headerImg"></img>
+			</div>
+			
+			<div class="container border rounded border-dark bg-42 h-175px">
+			
+				<h1 class="text-center text-light mt-3"><span class="text-yellow">Fortnite</span> statisztikák</h1>
+				
+				<div class="input-group mt-2">
+					<input type="text" class="normal_font form-control w-200px" id="formName" placeholder="EPIC felhasználónév" autocomplete="off" autofocus>
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-primary border border-dark ml-1 normal_font" onClick="updatePlayer();">Mehet</button>
+					</span>
+				</div>
+				
+				<div id="errorMessage"></div>
+				
+			</div>
+			
+			<div class="container border rounded border-dark bg-53 p-3">
+				
+				<div class="container border rounded border-dark bg-dark mt-2 p-3">
+					<div class="row">
+						<div id="profilePic" class="col-xs-1 border rounded border-light ml-2">
+							<img src="images/1.jpg" class="hidden">
+						</div>
+						<div class="col-xs-11 pl-3">
+							<h3 class="text-light" id="name"></h3>					
+							<p class="text-muted" id="lastUpdate"></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="container border rounded border-dark bg-dark mt-2">
+							<h3 class="text-yellow mt-1">Solo</h3>
+							<div class="text-light">
+								<p id="solo_lastMatch">Utolsó meccs:</p>
+								<p id="solo_minutesPlayed">Játszott idő:</p>
+								<p id="solo_matchesPlayed">Játszott meccsek:</p>
+								<p id="solo_wins">Győzelmek:</p>
+								<p id="solo_kills">Ölések:</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="container border rounded border-dark bg-dark mt-2">
+							<h3 class="text-yellow mt-1">Duo</h3>
+							<div class="text-light">
+								<p id="duo_lastMatch">Utolsó meccs:</p>
+								<p id="duo_minutesPlayed">Játszott idő:</p>
+								<p id="duo_matchesPlayed">Játszott meccsek:</p>
+								<p id="duo_wins">Győzelmek:</p>
+								<p id="duo_kills">Ölések:</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="container border rounded border-dark bg-dark mt-2">
+							<h3 class="text-yellow mt-1">Squad</h3>
+							<div class="text-light">
+								<p id="squad_lastMatch">Utolsó meccs:</p>
+								<p id="squad_minutesPlayed">Játszott idő:</p>
+								<p id="squad_matchesPlayed">Játszott meccsek:</p>
+								<p id="squad_wins">Győzelmek:</p>
+								<p id="squad_kills">Ölések:</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="container border rounded border-dark bg-dark mt-2">
+							<h3 class="text-yellow mt-1">Összesen</h3>
+							<div class="text-light">
+								<p class="hidden">ZSP</p>
+								<p id="all_minutesPlayed">Játszott idő:</p>
+								<p id="all_matchesPlayed">Játszott meccsek:</p>
+								<p id="all_wins">Győzelmek:</p>
+								<p id="all_kills">Ölések:</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+				<a href="https://www.github.com/PeterZsigmond" target="_blank" class="text-light mx-auto">Készítette: Zsigmond Péter, 2018</a>
+			</div>	
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="fortnite.js"></script>
+	
+	</body>
+	
+</html>
