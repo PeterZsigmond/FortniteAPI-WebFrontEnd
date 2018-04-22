@@ -1,4 +1,4 @@
-var keys = ["LOrmlUBVcdcOCzhxd5QM", "i9GNFvuGLRX3Xuqgiyfk"];
+﻿var keys = ["LOrmlUBVcdcOCzhxd5QM", "i9GNFvuGLRX3Xuqgiyfk"];
 var key;
 
 switch(Math.floor((Math.random() * 2) + 1))
