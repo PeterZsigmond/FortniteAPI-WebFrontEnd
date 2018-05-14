@@ -6,7 +6,8 @@
 
 body
 {
-	min-width: 330px;
+	background-color: black;
+	min-width: 350px;
 	font-family: Burbank;
 }
 
@@ -15,7 +16,6 @@ body
 	background: url('images/bg.jpg') no-repeat center center scroll;
 	-webkit-background-size: cover;
 	background: cover;
-	padding: 320px 0;
 }
 
 .normal_font
@@ -30,12 +30,42 @@ body
 
 .text-green
 {
-	color: green;
+	color: #258907;
 }
 
 .text-red
 {
-	color: red;
+	color: #ff4c4c;
+}
+
+.text-orange
+{
+	color: #C9782B;
+}
+
+.text-grey
+{
+	color: #8C8E8F;
+}
+
+.text-blue
+{
+	color: #1681C3;
+}
+
+.text-purple
+{
+	color: #9F38C7;
+}
+
+.font-size-48
+{
+	font-size: 48px;
+}
+
+.font-size-18
+{
+	font-size: 18px;
 }
 
 .bg-yellow
@@ -63,14 +93,13 @@ body
 	width: 200px;
 }
 
-.h-175px
+.h-255px
 {
-	height: 175px;
+	height: 255px;
 }
 
-.headerImg
+#profilePic img
 {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	max-width: 100px;
 }

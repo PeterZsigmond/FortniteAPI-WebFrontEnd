@@ -14,20 +14,18 @@
 
 	<body>
 		
-		<div class="bg pt-4">
+		<div class="bg pt-2 pb-5">
 		
-			<div class="container mb-1">
-				<img src="images/fbr.png" class="headerImg"></img>
-			</div>
+			<div class="container border rounded border-dark bg-42 h-255px">
 			
-			<div class="container border rounded border-dark bg-42 h-175px">
-			
-				<h1 class="text-center text-light mt-3"><span class="text-yellow">Fortnite</span> statisztikák</h1>
+				<p class="text-center text-light mt-3 mb-1 font-size-48"><span class="text-yellow">Fortnite</span> statisztikák</p>
+				
+				<div id="lastPlayers"></div>
 				
 				<div class="input-group mt-2">
 					<input type="text" class="normal_font form-control w-200px" id="formName" placeholder="EPIC felhasználónév" autocomplete="off" autofocus>
 					<span class="input-group-btn">
-						<button type="button" class="btn btn-primary border border-dark ml-1 normal_font" onClick="updatePlayer();">Mehet</button>
+						<button type="button" class="btn btn-primary border border-dark ml-1 normal_font" onClick="updatePlayer('');">Mehet</button>
 					</span>
 				</div>
 				
@@ -53,45 +51,48 @@
 					<div class="col-lg-3">
 						<div class="container border rounded border-dark bg-dark mt-2">
 							<h3 class="text-yellow mt-1">Solo</h3>
-							<div class="text-light">
+							<br>
+							<div class="text-light font-size-18">
 								<p id="solo_lastMatch">Utolsó meccs:</p>
-								<p id="solo_minutesPlayed">Játszott idő:</p>
 								<p id="solo_matchesPlayed">Játszott meccsek:</p>
 								<p id="solo_wins">Győzelmek:</p>
 								<p id="solo_kills">Ölések:</p>
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-lg-3">
 						<div class="container border rounded border-dark bg-dark mt-2">
 							<h3 class="text-yellow mt-1">Duo</h3>
-							<div class="text-light">
+							<br>
+							<div class="text-light font-size-18">
 								<p id="duo_lastMatch">Utolsó meccs:</p>
-								<p id="duo_minutesPlayed">Játszott idő:</p>
 								<p id="duo_matchesPlayed">Játszott meccsek:</p>
 								<p id="duo_wins">Győzelmek:</p>
 								<p id="duo_kills">Ölések:</p>
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-lg-3">
 						<div class="container border rounded border-dark bg-dark mt-2">
 							<h3 class="text-yellow mt-1">Squad</h3>
-							<div class="text-light">
+							<br>
+							<div class="text-light font-size-18">
 								<p id="squad_lastMatch">Utolsó meccs:</p>
-								<p id="squad_minutesPlayed">Játszott idő:</p>
 								<p id="squad_matchesPlayed">Játszott meccsek:</p>
 								<p id="squad_wins">Győzelmek:</p>
 								<p id="squad_kills">Ölések:</p>
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-lg-3">
 						<div class="container border rounded border-dark bg-dark mt-2">
 							<h3 class="text-yellow mt-1">Összesen</h3>
-							<div class="text-light">
+							<br>
+							<div class="text-light font-size-18">
 								<p class="hidden">ZSP</p>
-								<p id="all_minutesPlayed">Játszott idő:</p>
 								<p id="all_matchesPlayed">Játszott meccsek:</p>
 								<p id="all_wins">Győzelmek:</p>
 								<p id="all_kills">Ölések:</p>
@@ -99,6 +100,15 @@
 						</div>
 					</div>
 				</div>
+				
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="container border rounded border-dark bg-dark mt-2">
+							<p class="text-white">Színmagyarázat: <span class="text-red">-0,5</span> <span class="text-grey">0,5-1</span> <span class="text-green">1-1,5</span> <span class="text-blue">1,5-2</span> <span class="text-purple">2-3</span> <span class="text-orange">3-</span></p>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 			
 			<div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
