@@ -55,15 +55,14 @@ function updatePlayer(nev)
 			$("#duo_lastMatch").html("Utolsó meccs: " + timeSince(Date.parse(result.br.stats.pc.duo.lastMatch)));
 			$("#squad_lastMatch").html("Utolsó meccs: " + timeSince(Date.parse(result.br.stats.pc.squad.lastMatch)));
 			
-			$("#solo_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.solo.matchesPlayed);
-			$("#duo_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.duo.matchesPlayed);
-			$("#squad_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.squad.matchesPlayed);
-			$("#all_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.all.matchesPlayed);
+			var soloPerAllGame = (result.br.stats.pc.solo.matchesPlayed/result.br.stats.pc.all.matchesPlayed*100).toFixed(2);
+			var duoPerAllGame = (result.br.stats.pc.duo.matchesPlayed/result.br.stats.pc.all.matchesPlayed*100).toFixed(2);
+			var squadPerAllGame = (result.br.stats.pc.squad.matchesPlayed/result.br.stats.pc.all.matchesPlayed*100).toFixed(2);
 			
-			$("#solo_wins").html("Győzelmek: " + result.br.stats.pc.solo.wins + " (" + (result.br.stats.pc.solo.wins/result.br.stats.pc.solo.matchesPlayed*100).toFixed(2) + "%)");
-			$("#duo_wins").html("Győzelmek: " + result.br.stats.pc.duo.wins + " (" + (result.br.stats.pc.duo.wins/result.br.stats.pc.duo.matchesPlayed*100).toFixed(2) + "%)");
-			$("#squad_wins").html("Győzelmek: " + result.br.stats.pc.squad.wins + " (" + (result.br.stats.pc.squad.wins/result.br.stats.pc.squad.matchesPlayed*100).toFixed(2) + "%)");
-			$("#all_wins").html("Győzelmek: " + result.br.stats.pc.all.wins + " (" + (result.br.stats.pc.all.wins/result.br.stats.pc.all.matchesPlayed*100).toFixed(2) + "%)");
+			$("#solo_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.solo.matchesPlayed + " (<span class='text-grey'>" + soloPerAllGame + "%</span>)");
+			$("#duo_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.duo.matchesPlayed + " (<span class='text-grey'>" + duoPerAllGame + "%</span>)");
+			$("#squad_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.squad.matchesPlayed + " (<span class='text-grey'>" + squadPerAllGame + "%</span>)");
+			$("#all_matchesPlayed").html("Játszott meccsek: " + result.br.stats.pc.all.matchesPlayed);
 			
 			var solo_kpd = "<span class='text-" + getColorForKPD(result.br.stats.pc.solo.kpd) + "'>" + (result.br.stats.pc.solo.kpd).toFixed(2) + "</span>";			
 			var duo_kpd = "<span class='text-" + getColorForKPD(result.br.stats.pc.duo.kpd) + "'>" + (result.br.stats.pc.duo.kpd).toFixed(2) + "</span>";
@@ -74,6 +73,11 @@ function updatePlayer(nev)
 			$("#duo_kills").html("Ölések: " + result.br.stats.pc.duo.kills + " (K/D: " + duo_kpd + ")");
 			$("#squad_kills").html("Ölések: " + result.br.stats.pc.squad.kills + " (K/D: " + squad_kpd + ")");
 			$("#all_kills").html("Ölések: " + result.br.stats.pc.all.kills + " (K/D: " + all_kpd + ")");
+			
+			$("#solo_wins").html("Győzelmek: " + result.br.stats.pc.solo.wins + " (<span class='text-grey'>" + (result.br.stats.pc.solo.wins/result.br.stats.pc.solo.matchesPlayed*100).toFixed(2) + "%</span>)");
+			$("#duo_wins").html("Győzelmek: " + result.br.stats.pc.duo.wins + " (<span class='text-grey'>" + (result.br.stats.pc.duo.wins/result.br.stats.pc.duo.matchesPlayed*100).toFixed(2) + "%</span>)");
+			$("#squad_wins").html("Győzelmek: " + result.br.stats.pc.squad.wins + " (<span class='text-grey'>" + (result.br.stats.pc.squad.wins/result.br.stats.pc.squad.matchesPlayed*100).toFixed(2) + "%</span>)");
+			$("#all_wins").html("Győzelmek: " + result.br.stats.pc.all.wins + " (<span class='text-grey'>" + (result.br.stats.pc.all.wins/result.br.stats.pc.all.matchesPlayed*100).toFixed(2) + "%</span>)");			
 		}
       });
 }
